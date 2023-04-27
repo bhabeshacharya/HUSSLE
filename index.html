@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>www.HUSSLE.com</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/ece976662e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <h3>HUSSLE</h3>
+      </div>
+      <div class="icon">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="menu-items">
+        <li><a class="menu-anchor" href="#Home">Home</a></li>
+        <li><a class="menu-anchor" href="#About">Services</a></li>
+        <li><a class="menu-anchor" href="#Bmi">BMI</a></li>
+        <li><a class="menu-anchor" href="#calorie-section">Track Calorie</a></li>
+        <li><a class="menu-anchor" href="#Contact">Contact</a></li>
+      </div>
+    </nav>
+    <section id="Home">
+      <div class="container">
+        <h3>
+          Fitness is not a Destination. <br />
+          Its a Lifestyle.
+        </h3>
+        <p id="para1">
+          Take your first step towards a healthy lifestyle.
+          <br />
+          We are here to make it simpler and easier to achieve your fitness
+          goals.
+        </p>
+        <p id="para2">
+          <span id="bold">Sign up for free</span> to kickstart your fitness
+          journey with us.
+        </p>
+        <button id="btn">Sign Up</button>
+      </div>
+      <div class="arrow">
+        <span id="arr1"></span>
+        <span id="arr1"></span>
+        <span id="arr1"></span>
+      </div>
+    </section>
+    <section id="About">
+      <div class="wrapper">
+        <div class="card" id="card1">
+          <img src="images/img1.webp" alt="This is an image" />
+          <div class="inner-text">
+            <h3>Calculate Your BMI</h3>
+            <p>
+              BMI is an estimate of body fat and a good measure of your risk for
+              diseases. <br>Calculate Now!
+            </p>
+            <div class="btn-div">
+              <a href="#Bmi" class="cbtn">Get Started</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" id="card2">
+          <img src="images/img2.webp" alt="This is an image" />
+          <div class="inner-text">
+            <h3>Track Your Calories</h3>
+            <p>
+              Tracking calories helps people reach and maintain their weight and
+              fitness goals. <br>Track Now!
+            </p>
+            <div class="btn-div"><a href="#calorie-section" class="cbtn">Get Started</a></div>
+          </div>
+        </div>
+        <div class="card" id="card3">
+          <img src="images/img3.jpg" alt="This is an image" />
+          <div class="inner-text">
+            <h3>Personalized Plans</h3>
+            <p>
+              Connect with us to get personalized fitness plans according to your current fitness
+              level.
+            </p>
+            <div class="btn-div"><a href="#Contact" class="cbtn">Get Started</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Bmi">
+      <div class="bmi-box">
+        <h3 id="bmi-heading">Body Mass Index</h3>
+        <div class="inner-box">
+          <label for="nm">Enter your name</label>
+          <input id="nm" type="text" />
+          <label for="height">Enter your height (in cm)</label>
+          <input id="height" type="text" />
+          <label for="weight">Enter your weight (in Kg)</label>
+          <input id="weight" type="text" />
+          <p id="calc" onclick="bmi()">Calculate</p>
+          <label id="label-bmi"></label>
+          <div class="result">
+            <h3 id="ans"></h3>
+            <p id="bmi-text">
+              Please enter your height in centimeters and weight in kilograms
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="calorie-section">
+      <div class="info-box">
+        <h3 id="bmi-heading">Track Your Calories</h3>
+        <div class="info-container">
+          <h4 id="info-heading">
+            Counting calories is a time-tested way
+          </h4>
+          <p class="cal-text">
+          Weight Loss = Calorie Intake < Maintainance Calories <br />Weight Maintain = Calorie Intake = Maintainance Calories <br />Weight Gain = Calorie Intake > Maintainance Calories
+          </p>
+          <p class="cal-text">
+            In order to calculate Maintainance Calories we need to first
+            calculate our Basal Metabolic Rate (BMR).
+          </p>
+          <p id="fbmr">Find Basal Metabolic Rate</p>
+          <p id="fmc">Find Maintainance Calories</p>
+        </div>
+
+        <div class="fbmr-container">
+          <div class="fbmr-wrapper">
+            <h3 id="fbmr-heading">Basal Metabolic Rate</h3>
+            <label>Enter your gender</label>
+            <div class="radio">
+              <input type="radio" value="Male" id="mbtn" name="gender" />Male
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                type="radio"
+                value="Female"
+                id="fbtn"
+                name="gender"
+              />Female
+            </div>
+            <label>Enter your weight (in kg)</label>
+            <input type="text" id="fbmr-w" />
+            <label>Enter your height (in cm)</label>
+            <input type="text" id="fbmr-h" />
+            <label>Enter your age</label>
+            <input type="text" id="fbmr-a" />
+            <p id="fbmr-btn" onclick="BMR()">Calculate</p>
+            <p id="fbmr-back" onclick="back-fbmr()">Back</p>
+            <div class="fmbr-res">
+              <h3 id="fbmr-ans"></h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="mc-container">
+          <div class="mc-wrapper">
+            <h3 id="mc-heading">Maintainance Calories</h3>
+            <label>Enter your Basal Metabolic Rate</label>
+            <input type="text" id="mc-bmr" />
+            <label>Choose your activity level</label>
+            <div class="xyz">
+              <input type="radio" name="activity" id="sedentary" /> Sedentary
+            </div>
+            <div class="xyz">
+              <input type="radio" name="activity" id="lactive" /> Lightly Active
+            </div>
+            <div class="xyz">
+              <input type="radio" name="activity" id="mactive" /> Moderately
+              Active
+            </div>
+            <div class="xyz">
+              <input type="radio" name="activity" id="vactive" /> Very Active
+            </div>
+            <div class="xyz">
+              <input type="radio" name="activity" id="eactive" /> Extra Active
+            </div>
+            <p id="mc-btn" onclick="MC()">Calculate</p>
+            <p id="mc-back" onclick="back-mc()">Back</p>
+            <div class="mc-res">
+              <h3 id="mc-ans"></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Contact">
+      <div class="contact-container">
+        <h3 id="contact-heading">Get in Touch</h3>
+          <form autocomplete="off">
+            <input type="text" name="name" id="name" placeholder="Enter Your Name " autocomplete="off">
+            <input type="email" name="email" id="email" placeholder="Enter Your Email " autocomplete="off">
+            <input type="mobile number" name="mno" id="mno" placeholder="Enter Your Mobile Number " autocomplete="off">
+            <textarea name="msg" id="msg" cols="30" rows="5" placeholder="Leave A Message" autocomplete="off"></textarea>
+            <button id="submit-btn" name="submit" type="submit">Submit</button>
+          </form>
+      </div>
+    </section>
+    <footer id="footer" >
+      <div class="footer-container">
+        <div class="con-info">
+          <h4>Contact: 8117080763</h4>
+          <h4>Email: bhabeshacharya02@gmail.com</h4>
+        </div>
+        <div class="trademark">
+          <h4>www.HUSSLE.com</h4>
+          <h4>All Rights Reserved | Created by Bhabesh Acharya</h4>
+        </div>
+        <div class="address">
+          <h4>Balasore | 756001</h4>
+          <h4>Odisha | India.</h4>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="main.js"></script>
+</html>
